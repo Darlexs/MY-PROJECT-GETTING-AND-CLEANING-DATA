@@ -1,0 +1,41 @@
+1. EL CÓDIGO AUTOMATICAMENTE DESCARGA EL ARCHIVO ZIP.
+
+2. SE CREA LA FUNCIÓN "ReadZip" PARA CARGAR A R LOS ARCHIVOS NECESARIOS. 
+
+3. SE CARGAN LOS ARCHIVOS Y SE CRAN LAS VARIABLES:
+
+  3.1 Las variables "TRSubj" y "TSSubj" corresponden a los archivos "subject_train.txt" y "subject_test.txt" respectivamente. Estos archivos
+      contienen el ID del Sujeto o persona analizada. 
+      
+  3.2 Las variables "SetTest_X" y "SetTrain_X" corresponden a los archivos "X_test.txt" y"X_train.txt" respectivamente. Estos archivos
+      contienen los resultados de las observaciones realizadas mediante el acelerómetro y el giroscopio.
+      
+  3.3 Las variables "SetTest_Y" y "SetTrain_Y" corresponden a los archivos "y_test.txt" y"y_train.txt" respectivamente. Estos archivos
+      contienen los ID de las "actividades" analizadas en todas las obserbaciones.
+      
+  3.4 La variable "feat" corresponde al archivo "features.txt" el cual contiene una lista de funciones de todas las observaciones y un identificador
+      de columnas.
+      
+  3.5 La variable "Act" corresponde al archivo "activity_labels.txt" el cual contiene el ID y la descripcion de las Actividades anaizadas.    
+
+4. FUNCIONALIDAD DEL SCRIPT RUN_ANALYSIS
+
+  4.1 Merges the training and the test sets to create one data set.
+      Mediante la funcion cbind se unen las variables tanto de TEST como de TRAIN
+      Se crean las nuevas variables consolidadas "Data_Set_X" - "Data_Set_Y" - "Data_Set_Subj"
+      
+  4.2 Extracts only the measurements on the mean and standard deviation for each measurement.   
+      La variable "mean_std_features" se crea al extrar de la variable "feat" la columnas en las cuales se calculó los promedios y las 
+      desviaciones estandar.
+      
+  4.3 Uses descriptive activity names to name the activities in the data set
+      Obtiene de la variable "Act" el nombre de las actividades según el ID de "Data_Set_Y"
+      
+  4.4 Appropriately labels the data set with descriptive variable names.   
+  
+  4.5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+  
+  
+
+EXPLICACIÓN DE LAS VARIABLES UTILIZADAS.
+
